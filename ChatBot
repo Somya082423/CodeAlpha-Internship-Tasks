@@ -1,0 +1,31 @@
+import random
+import nltk
+from nltk.chat.util import chat, reflections
+
+nltk.download('punkt')
+nltk.download('averaged_perception_tagger')
+
+pairs = [
+    [
+        r"my name is (.*)",
+        ["Hello %1, how can i help you today?",]
+    ],
+    [
+        r"what's your name?",
+        ["My name is ChatBot, your friendly assistant.",]
+    ],
+    [
+        r"how are you ?",
+        ["i'm doing well, thank you for asking.",
+        "i'm a ChatBot, so i don't have feelings but i'm here to assist you!",]
+    ],
+    [
+        r"what is your purpose ?",
+        ["My purpose is to help you with your tasks and provide information.", "i'm here to make your life a bit easier!,"]
+    ],
+    [
+        r"quit",
+        ["Bye! take care.", "Have a nice day!",]
+    ],
+    [
+        
