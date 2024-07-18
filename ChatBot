@@ -28,4 +28,25 @@ pairs = [
         ["Bye! take care.", "Have a nice day!",]
     ],
     [
-        
+        r"(.*)(weather|temprature)(.*)",
+        ["The weather in %3 is currently %1, but i don't have real-time information. You can check a weather website for the most accurate data.",]
+    ]'
+    [
+        r"what is(.*)?",
+        ["i'm sorry, i don't have information on %1. You can try searching on google or another search engine.",]
+    ]
+   ]
+   reflections = {
+       "i am": "you are',
+       "i was": "you were",
+       "i" : "you",
+       "my" : "your",
+       "you are" : "i am",
+       "you were" : "i was",
+       "you" : "i",
+       "your" : "my",
+    }
+    chatBot = Chat(pairs, reflections)
+
+    print("Hi, i'm ChatBot. How cani assist you today?")
+    chatBot.converse()
